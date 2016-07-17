@@ -7,18 +7,34 @@ public class Treasure : MonoBehaviour {
 	bool didPlayerWin = false;
 	public Text OnScreenText;             // assign in inspector, Text UI
 	public Transform PlayerCharacter;         // assign in inspector, player
+	public Transform Goal;
+	public Transform Hint1;
+//	public Transform Hint2;
+//	public Transform Hint3;
+//	public Transform Hint4;
+//	public Transform Hint5;
 
 	void Update () {
 
-		if ( (PlayerCharacter.position - transform.position).magnitude < 5f) {
+		if ( (PlayerCharacter.position - Goal.position).magnitude < 5f) {
 
-			OnScreenText.text = "Find the Treasure then press [SPACE] to win!";
+			OnScreenText.text = "Find the Treasure then press [SPACE] to win!\nWalk up to fellow travelers to receive hints!";
+
 			if ( Input.GetKey (KeyCode.Space) ) {
 				didPlayerWin = true;
 			}
 			if ( didPlayerWin ) {
 				OnScreenText.text = "YOU GOT THE TREASURE AND YOU WIN!!";
 			}
-		} 
+		}
+
+		if ((PlayerCharacter.position - Hint1.position).magnitude < .5f) {
+
+			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+		} else {
+			OnScreenText.text = "Find the Treasure then press [SPACE] to win!\nWalk up to fellow travelers to receive hints!";
+		}
+
+
 	}
 }
