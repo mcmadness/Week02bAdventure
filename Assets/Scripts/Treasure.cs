@@ -12,7 +12,7 @@ public class Treasure : MonoBehaviour {
 
 		if ( (PlayerCharacter.position - transform.position).magnitude < 5f) {
 
-			OnScreenText.text = "Press [SPACE] to get treasure and win!";
+			OnScreenText.text = "Find the Treasure then press [SPACE] to win!";
 			if ( Input.GetKey (KeyCode.Space) ) {
 				didPlayerWin = true;
 			}
