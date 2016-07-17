@@ -9,12 +9,33 @@ public class Treasure : MonoBehaviour {
 	public Transform PlayerCharacter;         // assign in inspector, player
 	public Transform Goal;
 	public Transform Hint1;
-//	public Transform Hint2;
-//	public Transform Hint3;
-//	public Transform Hint4;
-//	public Transform Hint5;
+	public Transform Hint2;
+	public Transform Hint3;
+	public Transform Hint4;
+	public Transform Hint5;
 
 	void Update () {
+
+
+		if ((PlayerCharacter.position - Hint1.position).magnitude < 1f) {
+			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+
+		} else if ((PlayerCharacter.position - Hint2.position).magnitude < 1f) {
+			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+
+		} else if ((PlayerCharacter.position - Hint3.position).magnitude < 1f) {
+			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+
+		} else if ((PlayerCharacter.position - Hint4.position).magnitude < 1f) {
+			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+
+		} else if ((PlayerCharacter.position - Hint5.position).magnitude < 1f) {
+			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+
+		} else{
+			OnScreenText.text = "Find the Treasure then press [SPACE] to win!\nWalk up to fellow travelers to receive hints!";
+		}
+
 
 		if ( (PlayerCharacter.position - Goal.position).magnitude < 5f) {
 
@@ -27,14 +48,6 @@ public class Treasure : MonoBehaviour {
 				OnScreenText.text = "YOU GOT THE TREASURE AND YOU WIN!!";
 			}
 		}
-
-		if ((PlayerCharacter.position - Hint1.position).magnitude < .5f) {
-
-			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
-		} else {
-			OnScreenText.text = "Find the Treasure then press [SPACE] to win!\nWalk up to fellow travelers to receive hints!";
-		}
-
 
 	}
 }
