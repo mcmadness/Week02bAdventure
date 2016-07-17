@@ -21,16 +21,17 @@ public class Treasure : MonoBehaviour {
 			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
 
 		} else if ((PlayerCharacter.position - Hint2.position).magnitude < 1f) {
-			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+			OnScreenText.text = "My mama always said, ‘Hold up both hands, then extend your index finger and thumb." +
+				"Whichever hand makes an L is left!’";
 
 		} else if ((PlayerCharacter.position - Hint3.position).magnitude < 1f) {
-			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+			OnScreenText.text = "Looks like we’re both bad at sumthin’ pardner... followin’ directions.";
 
 		} else if ((PlayerCharacter.position - Hint4.position).magnitude < 1f) {
-			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+			OnScreenText.text = "Just follow the directions once more... WITH FEELING!";
 
 		} else if ((PlayerCharacter.position - Hint5.position).magnitude < 1f) {
-			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
+			OnScreenText.text = "Yarr!! Almost there laddie. Just think... which way do pirates dig to bury der treasure?";
 
 		} else{
 			OnScreenText.text = "Find the Treasure then press [SPACE] to win!\nWalk up to fellow travelers to receive hints!";
