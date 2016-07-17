@@ -21,8 +21,8 @@ public class Treasure : MonoBehaviour {
 			OnScreenText.text = "A wise man once said, ‘Three lefts makes a right’.";
 
 		} else if ((PlayerCharacter.position - Hint2.position).magnitude < 1f) {
-			OnScreenText.text = "My mama always said, ‘Hold up both hands, then extend your index finger and thumb." +
-				"Whichever hand makes an L is left!’";
+			OnScreenText.text = "Hold up both hands, then extend your index finger and thumb. " +
+				"Whichever hand makes an L is left! I'd do it, but I have paws...";
 
 		} else if ((PlayerCharacter.position - Hint3.position).magnitude < 1f) {
 			OnScreenText.text = "Looks like we’re both bad at sumthin’ pardner... followin’ directions.";
