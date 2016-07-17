@@ -16,22 +16,22 @@ public class Player : MonoBehaviour {
 
 		// press the up arrow to apply upward force
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, 50f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, 100f) * Time.deltaTime;
 		}
 
 		// press left arrow to apply left arrow force
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (-50f, 0f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (-100f, 0f) * Time.deltaTime;
 		}
 
 		// press down arrow to apply downward force
 		if (Input.GetKey (KeyCode.DownArrow)) {
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, -50f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (0f, -100f) * Time.deltaTime;
 		}
 
 		// press right arrow to apply rightward force
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			GetComponent<Rigidbody2D> ().velocity += new Vector2 (50f, 0f) * Time.deltaTime;
+			GetComponent<Rigidbody2D> ().velocity += new Vector2 (100f, 0f) * Time.deltaTime;
 		}
 	}
 }
