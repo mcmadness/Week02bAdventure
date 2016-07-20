@@ -38,7 +38,7 @@ public class Treasure : MonoBehaviour {
 		}
 
 
-		if ( (PlayerCharacter.position - Goal.position).magnitude < 5f) {
+		if ( (PlayerCharacter.position - Goal.position).magnitude < .75f) {
 
 			OnScreenText.text = "Find the Treasure then press [SPACE] to win!\nWalk up to fellow travelers to receive hints!";
 
