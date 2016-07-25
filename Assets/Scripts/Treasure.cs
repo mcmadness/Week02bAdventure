@@ -87,6 +87,10 @@ public class Treasure : MonoBehaviour {
 			}
 
 		}
+		if (killable.currentHealth <= 1) {
+			OnScreenText.text = "You've died. Press [R] to restart.";
+
+		}
 
 	}
 }
