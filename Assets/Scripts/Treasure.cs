@@ -17,7 +17,8 @@ public class Treasure : MonoBehaviour {
 	public GameObject enemy1 ;
 	public GameObject enemy2 ;
 	public GameObject enemy3 ;
-	public GameObject enemy4 ;	
+	public GameObject enemy4 ;
+
 
 
 
@@ -68,6 +69,11 @@ public class Treasure : MonoBehaviour {
 			enemy2.GetComponent<EnemyFollow> ().enabled = true;
 			enemy3.GetComponent<EnemyFollow> ().enabled = true;
 			enemy4.GetComponent<EnemyFollow> ().enabled = true;
+			enemy1.GetComponent<deathTrigger> ().triggerEnabled = true;
+			enemy2.GetComponent<deathTrigger> ().triggerEnabled = true;
+			enemy3.GetComponent<deathTrigger> ().triggerEnabled = true;
+			enemy4.GetComponent<deathTrigger> ().triggerEnabled = true;
+
 			GetComponent<SpriteRenderer> ().enabled = false;
 			GetComponent<BoxCollider2D> ().enabled = false;
 		}
