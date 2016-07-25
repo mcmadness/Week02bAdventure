@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿
+
+//THE GAME NO LONGER USES THESE CONTROLS, USE AltPlayer SCRIPT
+
+using UnityEngine;
 using System.Collections;
 
 public class Player : MonoBehaviour {
